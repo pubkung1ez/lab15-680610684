@@ -2,9 +2,9 @@ import type { Student, Course, Enrollment } from "@/lib/types";
 
 export const students: Student[] = [
   {
-    studentId: "650610001",
-    firstName: "Matt",
-    lastName: "Damon",
+    studentId: "680610684",
+    firstName: "Tirapan",
+    lastName: "Krithongyu",
     program: "CPE",
   },
   {
@@ -66,14 +66,14 @@ export const enrollments: Enrollment[] = [
 ];
 
 // นักศึกษาที่ "ล็อกอินอยู่" — ไม่มีระบบ Login/Role ในแลปนี้ จึงกำหนดไว้ที่นี่ที่เดียว
-export const CURRENT_STUDENT_ID = "650610002";
+export const CURRENT_STUDENT_ID = "680610684";
 export const currentStudent = students.find(
   (s) => s.studentId === CURRENT_STUDENT_ID,
 )!;
 
 // ข้อมูลส่วนแสดงสถานะผู้ใช้ที่ Sidebar (ข้อ 5 ของโจทย์) — แก้เป็นชื่อเล่นและรูปของตัวเอง
 export const currentUser = {
-  nickname: "Cillian",
+  nickname: "Tirapan",
   role: "STUDENT" as "STUDENT" | "ADMIN",
   avatar: "/profile.svg", // วางรูปไว้ที่ public/
 };

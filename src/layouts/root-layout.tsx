@@ -28,7 +28,7 @@ export default function RootLayout() {
             <Outlet />
           </div>
           <footer className="-mx-3 mt-3 flex h-8 items-center justify-center border-t border-border text-[10px] text-muted-foreground dark:border-white/10 dark:text-white/60">
-            จัดทำโดย {currentUser.nickname} Murphy รหัสนักศึกษา {currentStudent.studentId}
+            จัดทำโดย {currentUser.nickname} {currentStudent.lastName} รหัสนักศึกษา {currentStudent.studentId}
           </footer>
         </main>
       </SidebarInset>

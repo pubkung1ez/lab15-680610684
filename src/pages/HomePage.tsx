@@ -20,7 +20,7 @@ export default function HomePage() {
 
       <div className="mt-6 text-center text-sm text-white/70">
         <span>
-          จัดทำโดย {currentUser.nickname} Murphy รหัสนักศึกษา {currentStudent.studentId}
+          จัดทำโดย {currentUser.nickname} {currentStudent.lastName} รหัสนักศึกษา {currentStudent.studentId}
         </span>
       </div>
     </div>
