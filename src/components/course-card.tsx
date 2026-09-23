@@ -57,8 +57,8 @@ export function CourseCard({
           <span
             className={
               isRegistered
-                ? "absolute right-4 top-3 rounded-full bg-[#f4d17a] px-2.5 py-1 text-[10px] font-medium leading-none text-[#402500] dark:bg-[#5b2ca9] dark:text-[#f7e9ff]"
-                : "absolute right-4 top-3 rounded-full bg-[#d9c8ff] px-2.5 py-1 text-[10px] font-medium leading-none text-[#3d1a6b] dark:bg-[#c1881a] dark:text-[#1f1200]"
+                ? "absolute right-4 top-3 rounded-full bg-[#5e2ca7] px-2.5 py-1 text-[10px] font-medium leading-none text-[#f3e8ff]"
+                : "absolute right-4 top-3 rounded-full bg-[#f4b942] px-2.5 py-1 text-[10px] font-medium leading-none text-[#1a120a]"
             }
           >
             {isRegistered ? "ลงทะเบียนแล้ว" : "เปิดรับ"}

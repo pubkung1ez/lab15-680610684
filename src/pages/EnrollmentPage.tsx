@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 import { CourseCard } from "@/components/course-card";
 import { RegisterDialog } from "@/components/register-dialog";
@@ -10,10 +10,31 @@ import {
 } from "@/lib/mock-data";
 import type { Enrollment } from "@/lib/types";
 
+const STORAGE_KEY = "lab15-enrollments";
+
 export default function EnrollmentPage() {
-  const [enrollments, setEnrollments] = useState<Enrollment[]>(
-    initialEnrollments.filter((item) => item.studentId === CURRENT_STUDENT_ID),
-  );
+  const [enrollments, setEnrollments] = useState<Enrollment[]>(() => {
+    const saved = localStorage.getItem(STORAGE_KEY);
+
+    if (!saved) {
+      return initialEnrollments.filter(
+        (item) => item.studentId === CURRENT_STUDENT_ID,
+      );
+    }
+
+    try {
+      const parsed = JSON.parse(saved) as Enrollment[];
+      return parsed.filter((item) => item.studentId === CURRENT_STUDENT_ID);
+    } catch {
+      return initialEnrollments.filter(
+        (item) => item.studentId === CURRENT_STUDENT_ID,
+      );
+    }
+  });
+
+  useEffect(() => {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(enrollments));
+  }, [enrollments]);
 
   const enrollmentMap = useMemo(
     () =>
