@@ -57,9 +57,14 @@ export function CourseCard({
           <span
             className={
               isRegistered
-                ? "absolute right-4 top-3 rounded-full bg-[#5e2ca7] px-2.5 py-1 text-[10px] font-medium leading-none text-[#f3e8ff]"
-                : "absolute right-4 top-3 rounded-full bg-[#f4b942] px-2.5 py-1 text-[10px] font-medium leading-none text-[#1a120a]"
+                ? "group/badge inline-flex h-5 w-fit shrink-0 items-center justify-center gap-1 overflow-hidden rounded-4xl border border-transparent px-2 py-0.5 text-xs font-medium whitespace-nowrap transition-all focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&>svg]:pointer-events-none [&>svg]:size-3! bg-amber-500/15 text-amber-700 dark:text-purple-700"
+                : "group/badge inline-flex h-5 w-fit shrink-0 items-center justify-center gap-1 overflow-hidden rounded-4xl border border-transparent px-2 py-0.5 text-xs font-medium whitespace-nowrap transition-all focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&>svg]:pointer-events-none [&>svg]:size-3! [a]:hover:bg-primary/80 bg-purple-500/15 text-purple-700 dark:text-amber-400 dark:bg-amber-500/15"
             }
+            style={{
+              position: "absolute",
+              right: "1rem",
+              top: "0.75rem",
+            }}
           >
             {isRegistered ? "ลงทะเบียนแล้ว" : "เปิดรับ"}
           </span>
