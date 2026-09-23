@@ -56,9 +56,11 @@ export function AppSidebar() {
       </SidebarContent>
 
       <div className="mt-auto flex items-center gap-3 border-t border-border px-3 py-3 dark:border-white/10">
-        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-violet-500 text-white">
-          <UserRound className="h-4 w-4" />
-        </div>
+        <img
+          src={currentUser.avatar}
+          alt={currentUser.nickname}
+          className="h-8 w-8 rounded-full object-cover"
+        />
         <div className="min-w-0 leading-tight">
           <div className="truncate text-sm font-medium text-foreground dark:text-white">
             {currentUser.nickname}
