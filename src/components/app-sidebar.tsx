@@ -1,4 +1,4 @@
-import { BookOpen, Home, UserRound } from "lucide-react";
+import { BookOpen, Home } from "lucide-react";
 import { Link, useLocation } from "react-router";
 
 import { currentUser } from "@/lib/mock-data";
